@@ -4,8 +4,6 @@ import matplotlib.pyplot as plt
 
 # Fitting a polynomial curve to given value
 
-# Fitting a polynomial curve to given value
-
 df = pd.read_excel('NewMargin.xlsx', sheet_name='prices margin using')
 ComparePrices = df['ComparePrices']
 PricesRatio = df['PricesRatio']
