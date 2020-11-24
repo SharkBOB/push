@@ -64,9 +64,6 @@ import numpy as np
 from sympy import *
 
 
-
-
-
 def test(a, b):
     return a + b
 
@@ -92,7 +89,7 @@ print(QuadraticFunction(2, 3, 4, 1))
 #
 # pd.read_excel()
 
-# s={"code":"200","data":{"desc":"轩逸 2018款 1.6XV CVT尊享版","family":"轩逸","make":"东风日产","msrp":137800,"retail":84750,"wholesale":78750},"message":"成功"}
+# s = {"code":"200","data":{"desc":"轩逸 2018款 1.6XV CVT尊享版","family":"轩逸","make":"东风日产","msrp":137800,"retail":84750,"wholesale":78750},"message":"成功"}
 # print(s['code'])
 # print(s['data']['family'])
 
@@ -205,6 +202,20 @@ pd.set_option('max_columns', 50)
 
 s = pd.Series([6, 'Heisenberg', 3.14, -1789710578, 'Happy day'])
 print(s)
+
+
 #
 # for (k,v) in dic1.items():
 #     print("dict[%s]=" % k,v)
+
+# init method or constructor
+class Person:
+    def __init__(self, name):
+        self.name = name + 'BBQ'
+
+    def sayhi(self):
+        print('Hello my name is ', self.name)
+
+
+p = Person('john')
+p.sayhi()
