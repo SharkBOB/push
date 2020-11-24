@@ -1,6 +1,6 @@
 import pandas as pd
 
-wb = pd.read_excel('RB20201102.xlsx')
+wb = pd.read_excel('RB20201124.xlsx')
 
 # wb.to_excel('newRB.xlsx')
 # print(wb.columns)
@@ -33,7 +33,7 @@ JoinYearRatio = JoinPricesRatio.merge(wb3, on='year', how='left')
 
 # Merge the Prices Ratio and Year Ratio
 
-GoodWhosales = JoinYearRatio['GoodRetail']*(1-(JoinYearRatio['PricesRatio']*JoinYearRatio['YearRatio']))
+GoodWhosales = JoinYearRatio['GoodRetail']/(1+(JoinYearRatio['PricesRatio']*JoinYearRatio['YearRatio']))
 
 print(GoodWhosales)
 finaldf=pd.DataFrame({'code': JoinYearRatio['code'],
@@ -43,7 +43,7 @@ finaldf=pd.DataFrame({'code': JoinYearRatio['code'],
                       'ComparePrices': JoinYearRatio['ComparePrices'],
                       'PricesRatio':JoinYearRatio['PricesRatio'],
                       'YearRatio':JoinYearRatio['YearRatio']})
-finaldf.to_excel('final.xlsx')
+finaldf.to_excel('final20201124.xlsx')
 print('OK')
 
-# newdf.to_dict()
+
