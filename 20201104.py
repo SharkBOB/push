@@ -1,15 +1,16 @@
 import pymysql
+import pandas as pd
 from openpyxl import load_workbook
 
-wb = load_workbook('城市省份.xlsx')
-ws = wb['Sheet1']
-maxrow=ws.max_row
-maxcol=ws.max_column
-print(maxrow,maxcol)
-for row in ws.rows:
-    for cell in row:
-        if cell != None:
-            print(cell.value)
+# wb = load_workbook('城市省份.xlsx')
+# ws = wb['Sheet1']
+# maxrow=ws.max_row
+# maxcol=ws.max_column
+# print(maxrow,maxcol)
+# for row in ws.rows:
+#     for cell in row:
+#         if cell != None:
+#             print(cell.value)
 
 
 conn = pymysql.connect("192.168.1.118", user="root", password="root1234", db="daniel")
@@ -46,19 +47,37 @@ VAL = [
 # for v in VAL:
 #     cursor.execute(InsertSql, v)
 # cursor.execute(CreateSql)
-# cursor.execute("SELECT * FROM customers")
-# conn.commit()
-# myreulst = cursor.fetchall()
+cursor.execute("SELECT * FROM customers")
+conn.commit()
+myreulst = cursor.fetchall()
 # for i in myreulst:
 #     print(i)
-# print('OK')
 
-dict={"jack":2,"mike":3}
-str1=str(dict)
-print(str1)
 
-import json
+# dict={"jack":2,"mike":3}
+# str1=str(dict)
+# print(str1)
+#
+# import json
+#
+# dict1=json.loads("\"" + str1 + "\"")
+# print(dict1)
 
-dict1=json.loads("\"" + str1 + "\"")
-print(dict1)
+name = []
+adress = []
+for j in myreulst:
+    i = list(j)
+    name.append(i[0])
+    adress.append(i[1])
 
+newdf=pd.DataFrame({'name':name,'adress':adress})
+newdf.to_excel('test.xlsx')
+print('OK')
+# DictTest={'students':"jack","school":"mit"}
+# print(str(DictTest))
+# print(DictTest['students'])
+# print(tuple(DictTest))
+# print(list(DictTest.values()))
+
+# The dictionary could convert to the List,Tuple and String,
+# Except String remaining List and Tuple could not transform to the dictionary.
