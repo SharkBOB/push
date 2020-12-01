@@ -81,3 +81,8 @@ print('OK')
 
 # The dictionary could convert to the List,Tuple and String,
 # Except String remaining List and Tuple could not transform to the dictionary.
+DictTest = {'NAME': 'JACK', 'HEIGHT': 188}
+ListKey = list(DictTest)
+ListValue = list(DictTest.values())
+Transform= dict(zip(ListKey, ListValue))
+print(Transform)

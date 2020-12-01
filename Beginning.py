@@ -1,3 +1,5 @@
+
+# My First Code
 # def satisfaction(num1, num2):
 #     num = num1 + num2
 #     return num
@@ -84,12 +86,16 @@ def QuadraticFunction(a, b, c, x):
 print(QuadraticFunction(2, 3, 4, 1))
 
 # fx=symbols('x')
-#
 # FX=fx.integrate(fx,fx(1,2))
-#
 # pd.read_excel()
 
-# s = {"code":"200","data":{"desc":"轩逸 2018款 1.6XV CVT尊享版","family":"轩逸","make":"东风日产","msrp":137800,"retail":84750,"wholesale":78750},"message":"成功"}
+# s = {"code":"200","data":{"desc":"轩逸 2018款 1.6XV CVT尊享版",
+# "family":"轩逸",
+# "make":"东风日产",
+# "msrp":137800,
+# "retail":84750,
+# "wholesale":78750},
+# "message":"成功"}
 # print(s['code'])
 # print(s['data']['family'])
 
