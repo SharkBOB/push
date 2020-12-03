@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b65248d5-de13-4cee-b5c3-2a1a4def8faa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/20201203.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RB20201202.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/20201116.py" beforeDir="false" afterPath="$PROJECT_DIR$/20201116.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/20201130.py" beforeDir="false" afterPath="$PROJECT_DIR$/20201130.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +62,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/20201130.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="175">
@@ -78,7 +74,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/20201203.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -230,8 +226,8 @@
       <recent name="O:\untitled1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="O:\untitled1" />
       <recent name="O:\untitled1\learning note" />
+      <recent name="O:\untitled1" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -428,7 +424,7 @@
       <workItem from="1606296218772" duration="28308000" />
       <workItem from="1606727699189" duration="66000" />
       <workItem from="1606727946011" duration="495000" />
-      <workItem from="1606728464989" duration="34544000" />
+      <workItem from="1606728464989" duration="34659000" />
     </task>
     <task id="LOCAL-00001" summary="del some words">
       <created>1606186513454</created>
@@ -507,7 +503,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606810315726</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fundamental of Learning">
+      <created>1606976908260</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1606976908260</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -543,17 +546,17 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="350525000" />
+    <option name="totallyTimeSpent" value="350640000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49913943" visible="true" weight="0.14498934" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49913943" visible="true" weight="0.14498934" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5008606" side_tool="true" weight="0.124200426" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.09465479" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5010661" visible="true" weight="0.22494432" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5010661" weight="0.22494432" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.12458287" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -960,6 +963,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/20201203.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/20201130.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -969,9 +975,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/20201203.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
