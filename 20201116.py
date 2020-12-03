@@ -1,8 +1,8 @@
 import pandas as pd
-
+import math
 # Get the dataset from new monthly upgrade
 
-wb = pd.read_excel('RB20201124.xlsx')
+wb = pd.read_excel('RB20201202.xlsx')
 
 # wb.to_excel('newRB.xlsx')
 # print(wb.columns)
@@ -42,8 +42,6 @@ JoinYearRatio = JoinPricesRatio.merge(wb3, on='year', how='left')
 
 GoodWhosales = JoinYearRatio['GoodRetail'] / (1 + (JoinYearRatio['PricesRatio'] * JoinYearRatio['YearRatio']))
 
-print(GoodWhosales)
-
 # Create the final excel to useing
 
 finaldf = pd.DataFrame({'code': JoinYearRatio['code'],
@@ -53,5 +51,5 @@ finaldf = pd.DataFrame({'code': JoinYearRatio['code'],
                         'ComparePrices': JoinYearRatio['ComparePrices'],
                         'PricesRatio': JoinYearRatio['PricesRatio'],
                         'YearRatio': JoinYearRatio['YearRatio']})
-finaldf.to_excel('final20201124.xlsx')
+finaldf.to_excel('final20201202.xlsx')
 print('OK')
