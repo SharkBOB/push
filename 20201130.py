@@ -1,4 +1,3 @@
-import pandas as pd
 import mysql.connector
 
 # connect to mysql
@@ -10,6 +9,7 @@ mydb = mysql.connector.connect(
 )
 
 MyCursor = mydb.cursor()
+
 
 # --------------------------
 # Get the vehicle information from new data table
