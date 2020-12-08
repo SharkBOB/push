@@ -15,7 +15,7 @@ MyCursor = mydb.cursor()
 # Get the vehicle information from new data table
 # Find the issue prices
 
-def DetemingPrices(res):
+def judgment(res):
     result = list(res)
     # Get the description len
     for i in range(len(result) - 1):
@@ -31,7 +31,7 @@ def DetemingPrices(res):
             pass
 
 
-def GetData():
+def get_data():
     sql = "SELECT VehicleKey,MakeCode,FamilyCode,Description,COUNT(*) FROM rbvehicle202011 " \
           "GROUP BY MakeCode, FamilyCode,Description"
     MyCursor.execute(sql)
@@ -46,11 +46,11 @@ def GetData():
             MyCursor.execute(second_sql)
             second_result = MyCursor.fetchall()
             # Determing Prices Issues
-            issue_prices_code = DetemingPrices(second_result)
+            issue_prices_code = judgment(second_result)
             if issue_prices_code:
                 print(issue_prices_code, second_result)
     print("OK")
 
 
 if __name__ == '__main__':
-    GetData()
+    get_data()
