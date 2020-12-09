@@ -19,3 +19,21 @@ def investment(y1, y2, y3):
 
 Profit = investment(2023, 2022, 2021)
 print(Profit)
+
+import jieba
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+df=pd.read_excel('wordcloud.xlsx')
+s=str(df)
+print(s)
+mytext=" ".join(jieba.cut(s))
+print(mytext)
+
+wordclound=WordCloud(font_path='simsun.ttf',background_color='white').generate(mytext)
+# word_list=jieba.cut(s,cut_all=True)
+# word_space_list=" ".join(word_list)
+# my_wordcolud=WordCloud().generate(word_space_list)
+
+plt.imshow(wordclound,interpolation='bilinear')
+plt.axis('off')
+plt.show()

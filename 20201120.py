@@ -12,6 +12,7 @@ y_data = 2.9 * np.sin(1.5 * x_data) + np.random.normal(size=50)
 
 from scipy import optimize
 
+
 def func(x, a, b):
     return a * np.sin(b * x)
 
