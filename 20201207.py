@@ -10,9 +10,9 @@ def investment(y1, y2, y3):
     year2 = y2 - 2020
     year3 = y3 - 2020
     # Calculate compound interest on annual investment
-    year2020 = round(32000 * pow(1.04, year1 * 12), -2)
-    year2021 = round(32000 * pow(1.04, year2 * 12), -2)
-    year2022 = round(32000 * pow(1.04, year3 * 12), -2)
+    year2020 = round(30000 * pow(1.04, year1 * 12), -2)
+    year2021 = round(30000 * pow(1.04, year2 * 12), -2)
+    year2022 = round(30000 * pow(1.04, year3 * 12), -2)
     profitability = year2020 + year2021 + year2022 - (32000 * 3)
     return profitability
 
@@ -37,3 +37,6 @@ wordclound=WordCloud(font_path='simsun.ttf',background_color='white').generate(m
 plt.imshow(wordclound,interpolation='bilinear')
 plt.axis('off')
 plt.show()
+
+if __name__ == '__main__':
+    investment(2023, 2022, 2021)

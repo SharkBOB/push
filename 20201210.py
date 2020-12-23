@@ -30,33 +30,51 @@ print(X.head())
 onehotencoder = OneHotEncoder(categories='auto')
 X = onehotencoder.fit_transform(X).toarray()
 # delete the Interfering terms
-X = np.delete(X,[0],1)
+X = np.delete(X, [0], 1)
 print(X[0])
 
 # Row vectors to column vectors.
-y = y[:,np.newaxis]
+y = y[:, np.newaxis]
 onehotencoder = OneHotEncoder()
-y=onehotencoder.fit_transform(y).toarray()
+y = onehotencoder.fit_transform(y).toarray()
 print(y)
 
 # Create test and train set
 
 from sklearn.model_selection import train_test_split
-X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=0)
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
 print(len(X_train))
 print(len(X_test))
 
 # Standardize the data
-# from sklearn.preprocessing import StandardScaler
-# sc = StandardScaler()
-# X_train = sc.fit_transform(X_train)
-# X_test = sc.fit_transform(X_test)
+from sklearn.preprocessing import StandardScaler
+
+sc = StandardScaler()
+X_train = sc.fit_transform(X_train)
+X_test = sc.fit_transform(X_test)
 
 # decision tree
 from sklearn import tree
+
 clf = tree.DecisionTreeClassifier()
-clf = clf.fit(X_train,y_train)
+clf = clf.fit(X_train, y_train)
 y_pred = clf.predict(X_test)
 
 from sklearn.metrics import classification_report
-print(classification_report(y_test,y_pred))
+
+print(classification_report(y_test, y_pred))
+
+# Create the neural networks
+# import tflearn
+
+# net = tflearn.input_data(shape=[None, 11])
+
+# net = tflearn.fully_connected(net, 6, activation='relu')
+# net = tflearn.fully_connected(net, 6, activation='relu')
+# net = tflearn.fully_connected(net, 6, activation='relu')
+# net = tflearn.fully_connected(net, 2, activation='softmax')
+# net = tflearn.regression(net)
+# model = tflearn.DNN(net)
+# print(model.fit(X_train,y_train,n_epoch=30,batch_size=32,show_metric=True))
+

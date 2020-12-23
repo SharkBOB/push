@@ -2,7 +2,7 @@ import pandas as pd
 import math
 # Get the dataset from new monthly upgrade
 
-wb = pd.read_excel('RB20201204.xlsx')
+wb = pd.read_excel('RB20201221.xlsx')
 code = wb['VehicleKey']
 year = wb['YearGroup']
 GoodRetail = wb['GoodRetail']
@@ -47,5 +47,5 @@ finaldf = pd.DataFrame({'code': JoinYearRatio['code'],
                         'ComparePrices': JoinYearRatio['ComparePrices'],
                         'PricesRatio': JoinYearRatio['PricesRatio'],
                         'YearRatio': JoinYearRatio['YearRatio']})
-finaldf.to_excel('final20201204.xlsx')
+finaldf.to_excel('final20201222.xlsx')
 print('OK')
